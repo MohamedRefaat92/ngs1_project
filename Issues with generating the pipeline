@@ -1,0 +1,33 @@
+I faced the three following problems while generating the pipeline:
+a- The size of the ref genome was prohibitively large to download. To get the file, I contacted Osama who has already downloaded the file previously.
+b- It was challenging for me to run trimmomatic on multiple files. I found a solution for this problem in this thread http://seqanswers.com/forums/showthread.php?t=74228
+c- Indexing process using hisat2 failed producing the following the error
+
+Settings:
+  Output files: "GRCh38.p12.genome.*.ht2"
+  Line rate: 7 (line is 128 bytes)
+  Lines per side: 1 (side is 128 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Local offset rate: 3 (one in 8)
+  Local fTable chars: 6
+  Local sequence length: 57344
+  Local sequence overlap between two consecutive indexes: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  ../../GRCh38.p12.genome.fa
+Reading reference sizes
+  Time reading reference sizes: 00:00:19
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:17
+  Time to read SNPs and splice sites: 00:00:05
+Segmentation fault (core dumped)
